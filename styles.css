@@ -2,9 +2,31 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
+    background: linear-gradient(to bottom, #f9fafc, #eef2f7);
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 /* Header Section */
@@ -14,9 +36,9 @@ header {
 }
 
 header .logo img {
-    width: 150px; /* Adjust size as needed */
+    width: 280px; /* Larger Logo */
     max-width: 100%;
-    height: auto;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Hero Section */
@@ -28,16 +50,18 @@ header .logo img {
 }
 
 .hero h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 20px;
-    color: #222;
+    color: #2c3e50;
     font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Video Container */
 .video-container {
     margin: 20px auto;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .video-container video {
@@ -50,31 +74,33 @@ header .logo img {
 /* Disclaimer */
 .disclaimer {
     font-style: italic;
-    font-size: 0.8em; /* Smaller disclaimer text */
+    font-size: 0.7em;
     margin: 10px 0 30px;
-    color: #666;
+    color: #7f8c8d;
     text-align: center;
+    animation: slideUp 1.5s ease-in-out;
 }
 
 /* Call-to-Action Button */
 .cta-button {
     display: block;
     text-align: center;
-    background-color: #007bff;
+    background: #4CAF50;
     color: white;
     padding: 15px 0;
     border-radius: 8px;
-    font-size: 1.5em; /* Larger button text */
+    font-size: 1.4em;
     margin: 20px auto;
     width: 80%;
     max-width: 600px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
+    animation: bounce 2s infinite;
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #388E3C;
 }
 
 /* Resources Section */
@@ -85,8 +111,10 @@ header .logo img {
 }
 
 .resources h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-bottom: 20px;
+    color: #2c3e50;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .cards {
@@ -98,13 +126,13 @@ header .logo img {
 }
 
 .card {
-    background: #f9f9f9;
+    background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
-    width: 300px;
+    padding: 30px;
+    width: 350px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    animation: zoomIn 1.5s ease-in-out;
 }
 
 .card:hover {
@@ -113,7 +141,7 @@ header .logo img {
 }
 
 .card h3 {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-bottom: 10px;
     color: #333;
 }
@@ -128,7 +156,7 @@ header .logo img {
 .social {
     text-align: center;
     margin: 40px auto;
-    font-size: 1em;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .social a {
@@ -137,7 +165,7 @@ header .logo img {
     font-weight: bold;
 }
 
-/* Footer Section */
+/* Footer */
 footer {
     text-align: center;
     margin: 40px auto 0;
@@ -146,18 +174,3 @@ footer {
     font-size: 0.9em;
     color: #555;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 1.4em;
-    }
-
-    .cta-button {
-        font-size: 1.2em;
-    }
-
-    .card {
-        width: 90%;
-    }
-                                }
