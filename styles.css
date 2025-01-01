@@ -7,20 +7,19 @@ body {
     line-height: 1.6;
 }
 
+/* Header Section */
 header {
     text-align: center;
     padding: 20px 0;
 }
 
 header .logo img {
-    width: 150px;
+    width: 150px; /* Adjust size as needed */
+    max-width: 100%;
+    height: auto;
 }
 
-h1, h2 {
-    text-align: center;
-    margin: 20px 0;
-}
-
+/* Hero Section */
 .hero {
     text-align: center;
     margin: 40px auto;
@@ -28,8 +27,17 @@ h1, h2 {
     max-width: 800px;
 }
 
+.hero h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: bold;
+}
+
+/* Video Container */
 .video-container {
     margin: 20px auto;
+    text-align: center;
 }
 
 .video-container video {
@@ -39,24 +47,29 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Disclaimer */
 .disclaimer {
     font-style: italic;
-    font-size: 0.9em;
+    font-size: 0.8em; /* Smaller disclaimer text */
     margin: 10px 0 30px;
     color: #666;
+    text-align: center;
 }
 
+/* Call-to-Action Button */
 .cta-button {
     display: block;
     text-align: center;
     background-color: #007bff;
     color: white;
-    padding: 15px;
+    padding: 15px 0;
     border-radius: 8px;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Larger button text */
     margin: 20px auto;
     width: 80%;
+    max-width: 600px;
     text-decoration: none;
+    font-weight: bold;
     transition: background-color 0.3s;
 }
 
@@ -64,9 +77,16 @@ h1, h2 {
     background-color: #0056b3;
 }
 
+/* Resources Section */
 .resources {
-    margin: 40px auto;
+    margin: 50px auto;
     text-align: center;
+    padding: 20px;
+}
+
+.resources h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .cards {
@@ -84,16 +104,18 @@ h1, h2 {
     padding: 20px;
     width: 300px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .card h3 {
     font-size: 1em;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .card a {
@@ -102,21 +124,40 @@ h1, h2 {
     font-weight: bold;
 }
 
+/* Social Section */
 .social {
     text-align: center;
     margin: 40px auto;
+    font-size: 1em;
 }
 
 .social a {
     color: #007bff;
     text-decoration: none;
+    font-weight: bold;
 }
 
+/* Footer Section */
 footer {
     text-align: center;
-    margin: 40px auto;
+    margin: 40px auto 0;
     padding: 10px 0;
     background-color: #f1f1f1;
     font-size: 0.9em;
     color: #555;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.4em;
+    }
+
+    .cta-button {
+        font-size: 1.2em;
+    }
+
+    .card {
+        width: 90%;
+    }
+                                }
