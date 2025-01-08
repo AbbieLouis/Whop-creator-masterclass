@@ -174,3 +174,26 @@ footer {
     font-size: 0.9em;
     color: #555;
 }
+/* Buy Me a Coffee Section */
+.buy-coffee {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.coffee-button {
+    display: inline-block;
+    background-color: #FFD700; /* Yellow Button */
+    color: #333;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.coffee-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
